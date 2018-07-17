@@ -129,7 +129,7 @@ export default class Layout extends React.Component {
                     id:1,
                     username:"Sally23",
                     password: "12345",
-                    listOfEvents: "ghdgtege12422526161gsdhdbu"
+                    token: "ghdgtege12422526161gsdhdbu"
             },
             "isLoading": true
         };
@@ -139,10 +139,10 @@ export default class Layout extends React.Component {
                 this.setState(
                     {
                         session: {
-                            id:1,
-                            username:"Sally23",
-                            password: "12345",
-                            listOfEvents: "ghdgtege12422526161gsdhdbu"
+                            ID: 1,
+                            username: receivedUsername,
+                            password: receivedPassword,
+                            token: "gfdrtu6545hftydhgrhxfh"
                         }
                         
                     });
@@ -160,9 +160,9 @@ export default class Layout extends React.Component {
                 let event = theArrayWithEvent[0];
                 
                 if(answer === "yes"){
-                    event.meta_keys._rsvpYes.push(userId);
+                    event.RSVPyes.push(userId);
                 }else{
-                    event.meta_keys._rsvpNo.push(userId);
+                    event.RSVPno.push(userId);
                 }
                 
                 var tempArray = this.state.events;
